@@ -1,0 +1,72 @@
+﻿@model formulariosrazorpractica.Models.equipos
+@{
+    ViewBag.Title = "Registrar Equipo";
+}
+
+<h2>Registrar Equipo</h2>
+
+@using (Html.BeginForm("Registrar", "Equipos", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div>
+        @Html.LabelFor(m => m.nombre)
+        @Html.TextBoxFor(m => m.nombre)
+        @Html.ValidationMessageFor(m => m.nombre)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.descripcion)
+        @Html.TextAreaFor(m => m.descripcion)
+        @Html.ValidationMessageFor(m => m.descripcion)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.tipo_equipo_id)
+        @Html.TextBoxFor(m => m.tipo_equipo_id)
+        @Html.ValidationMessageFor(m => m.tipo_equipo_id)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.marca_id)
+        @Html.TextBoxFor(m => m.marca_id)
+        @Html.ValidationMessageFor(m => m.marca_id)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.modelo)
+        @Html.TextBoxFor(m => m.modelo)
+        @Html.ValidationMessageFor(m => m.modelo)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.anio_compra)
+        @Html.TextBoxFor(m => m.anio_compra)
+        @Html.ValidationMessageFor(m => m.anio_compra)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.costo)
+        @Html.TextBoxFor(m => m.costo)
+        @Html.ValidationMessageFor(m => m.costo)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.vida_util)
+        @Html.TextBoxFor(m => m.vida_util)
+        @Html.ValidationMessageFor(m => m.vida_util)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.estado_equipo_id)
+        @Html.TextBoxFor(m => m.estado_equipo_id)
+        @Html.ValidationMessageFor(m => m.estado_equipo_id)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.estado)
+        @Html.TextBoxFor(m => m.estado)
+        @Html.ValidationMessageFor(m => m.estado)
+    </div>
+
+    <button type="submit">Registrar</button>
+}
